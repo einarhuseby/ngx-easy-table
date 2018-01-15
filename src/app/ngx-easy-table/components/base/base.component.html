@@ -14,7 +14,7 @@
       <tr class="ngx-table__header" *ngIf="config.headerEnabled">
         <ng-container *ngFor="let column of columns">
           <th class="ngx-table__header-cell"
-              (click)="!!column.sort || orderBy(column['key'])">
+              (click)="!!column['sort'] || orderBy(column['key'])">
             <div class="ngx-d-inline">{{ column['title'] }}</div>
             <span *ngIf="resource.order[column['key']]==='asc' "
                   [style.display]="config.orderEnabled?'':'none' "
